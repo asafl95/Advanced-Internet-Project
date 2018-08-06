@@ -1,0 +1,36 @@
+<div flex layout="column">
+    <md-toolbar flex="12" layout="row" class="md-primary">
+        <div class="header">
+            <img src="https://image.ibb.co/dzupz8/logo.png">
+        </div>
+        <div flex></div>
+        <div layout="row" layout-align="center center">
+            <md-button style="color:white" ng-click="logout()" ng-if="isLogged">Logout</md-button>
+        </div>
+    </md-toolbar>
+    <div class="header-border-style">
+        <span class="border-bg-one"></span>
+        <span class="border-bg-two"></span>
+        <span class="border-bg-three"></span>
+        <span class="border-bg-four"></span>
+        <span class="border-bg-five"></span>
+    </div>
+    <div layout="row" flex>
+        <nav layout="row" flex="15" ng-if="isLogged">
+            <md-sidenav flex layout="column" layout-align="space-around" md-whiteframe="4" md-is-locked-open="true" class="md-sidenav-right"
+                layout-padding>
+                <div flex layout="column" ng-show="isLogged">
+                    <md-button ui-sref="shell.main">Home</md-button>
+                    <md-button ui-sref="shell.about">About</md-button>
+                    <md-button ui-sref="shell.admin" ng-if="isAdmin">Admin panel</md-button>
+                    <md-button ui-sref="shell.statistics" ng-if="isAdmin">Statistics</md-button>
+                </div>
+                <div flex></div>
+                <footer>
+                    Reviews is in my heart
+                </footer>
+            </md-sidenav>
+        </nav>
+        <div flex layout="column" ui-view layout-padding></div>
+    </div>
+</div>
