@@ -1,7 +1,5 @@
 import angular from 'angular';
 
-import logo from './logo2.jpg';
-
 const CONTROLLER = 'shellController';
 
 angular.module('advanced.controllers')
@@ -23,7 +21,6 @@ angular.module('advanced.controllers')
 
     $scope.isLogged = false;
 
-    $scope.image = logo;
   });
 
 export default CONTROLLER;
